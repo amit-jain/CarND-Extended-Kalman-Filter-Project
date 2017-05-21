@@ -2,7 +2,7 @@
 #define KALMAN_FILTER_H_
 #include "Eigen/Dense"
 
-class KalmanFilter {
+class  KalmanFilter {
 public:
 
   // state vector
@@ -64,6 +64,11 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+    /**
+     * Udates the state by using the Kalman filter equations
+     * @param y
+     */
+  void UpdateKF(const Eigen::VectorXd &y);
 };
 
 #endif /* KALMAN_FILTER_H_ */
